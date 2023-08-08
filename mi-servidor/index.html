@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saillen</title> 
+    <link rel="stylesheet" href="newStyle.css">
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    #createOrderButton, #searchButton, #newFichaButton, #backSearchButton, #backNewFichaButton {
+        margin: 0 auto;
+    }
+
+    #searchSection, #newFichaForm, #materialsSection {
+        display: none;
+    }
+</style>
+<body>
+
+<h2>Bienvenido</h2>
+<button id="createOrderButton">Crear Orden de Trabajo</button>
+
+<section id="searchSection">
+    <h2>Buscar Ficha</h2>
+    <input type="text" id="fichaInput" placeholder="Ingrese la ficha...">
+    <button id="searchButton">Buscar</button>
+    <div id="data" style="display: none;"></div>
+    <button id="backSearchButton">Volver</button>
+</section>
+
+<button id="newFichaButton">Cargar ficha nueva</button>
+
+<section id="newFichaForm">
+    <h2>Cargar Nueva Ficha</h2>
+    <form id="fichaForm">
+        <label for="ficha">Ficha:</label>
+        <input type="text" id="ficha" name="ficha"><br><br>
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" name="tipo"><br><br>
+        <label for="medidas">Medidas:</label>
+        <input type="text" id="medidas" name="medidas"><br><br>
+        <label for="caracteristicas">Caracteristicas:</label>
+        <input type="text" id="caracteristicas" name="caracteristicas"><br><br>
+        <label for="prensa">Prensa:</label>
+        <input type="text" id="prensa" name="prensa"><br><br>
+        <label for="presion">Presión:</label>
+        <input type="text" id="presion" name="presion"><br><br>
+        <label for="pesoTotal">Peso Total:</label>
+        <input type="text" id="pesoTotal" name="pesoTotal"><br><br>
+        <label for="largo">Largo:</label>
+        <input type="text" id="largo" name="largo"><br><br>
+        <label for="altura">Altura:</label>
+        <input type="text" id="altura" name="altura"><br><br>
+        <label for="ancho">Ancho:</label>
+        <input type="text" id="ancho" name="ancho"><br><br>
+        <label for="diametroRecorte">Diámetro de Recorte:</label>
+        <input type="text" id="diametroRecorte" name="diametroRecorte"><br><br>
+        <label for="buje">Buje:</label>
+        <input type="text" id="buje" name="buje"><br><br>
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo"><br><br>
+        <button id="saveButton">Guardar</button>
+    </form>
+    <button id="saveMaterialButton">Guardar Materiales</button>
+    <button id="backNewFichaButton">Volver</button>
+</section>
+
+<section id="materialsSection">
+    <h2>Materiales</h2>
+    <ul id="materialsList"></ul>
+    <input type="text" id="materialInput" placeholder="Agregar material...">
+    <button id="addMaterialButton">Agregar otro material</button>
+    <button id="saveMaterialsButton">Guardar Materiales</button>
+</section>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
